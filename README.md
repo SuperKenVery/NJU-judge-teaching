@@ -16,7 +16,8 @@
 3. 打开浏览器的开发者工具（F12），打开Console（控制台）页面
 <img width="1329" alt="image" src="https://github.com/SuperKenVery/NJU-judge-teaching/assets/39673849/41603738-5726-48c2-9ce6-a870d1635e11">
 
+有的浏览器（比如苹果Safari或者Microsoft Edge）默认状态下会屏蔽开发者工具，按了F12也不出来，这种情况可以自己搜一下怎么办。
+
 4. 把`judge.js`的内容全都复制进来，粘进console里
 5. 看网页自己评完吧～
-6. 在助教评教页面再来一次（不用再复制粘贴了，在控制台中输入`main()`即可）
-
+6. 在助教评教页面再来一次
