@@ -38,3 +38,7 @@
 5. 脚本自动评教，Console 中打印当前进展
 ![7fd721f7a399d6f1e1d28befef322879](https://github.com/user-attachments/assets/15222d37-71e6-43ea-8020-ebc3c3712972)
 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=SuperKenVery/NJU-judge-teaching&type=date&legend=top-left)](https://www.star-history.com/#SuperKenVery/NJU-judge-teaching&type=date&legend=top-left)
