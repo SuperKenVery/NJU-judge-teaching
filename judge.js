@@ -24,6 +24,7 @@ function allgood() {
     index,
   );
 
+  console.info(`全部打非常好`);
   while (good != null) {
     good.checked = true;
 
@@ -39,26 +40,36 @@ async function submit() {
   let submit = xpath(
     '//footer[@id="txwjFooter"]//a[text()[contains(.,"提交")]]',
   );
+  console.info(`提交`);
   submit.click();
 
   await sleep(200);
 
   let confirm = xpath('//a[text()[contains(.,"确认")]]');
-  if (confirm) confirm.click();
+  if (confirm) {
+    console.info(`确认提交`);
+    confirm.click();
+  }
 
   await sleep(4000);
 
   let no_recommend = xpath(
     '//div[@id="buttons"]//button[text()[contains(.,"暂不推荐")]]',
   );
-  if (no_recommend) no_recommend.click();
+  if (no_recommend) {
+    console.info(`不推荐我最喜爱的老师`);
+    no_recommend.click();
+  }
 
   await sleep(200);
 
   let no_tas = xpath(
     '//div[@class="bh-dialog-btnContainerBox"]//a[text()[contains(.,"暂时不评")]]',
   );
-  if (no_tas) no_tas.click();
+  if (no_tas) {
+    console.info(`暂不评价助教`);
+    no_tas.click();
+  }
 }
 
 // 为了跳过已经出成绩、无法评教的课。从1开始。
@@ -69,9 +80,11 @@ async function next() {
     next_judge_button_index,
   );
   if (judge_next == null) {
+    console.info(`没有下一个要评价了`);
     return false;
   }
 
+  console.info(`评价下一个`, judge_next);
   judge_next.click();
 
   // 如果有课已经出成绩了，就会无法评教。
@@ -79,8 +92,10 @@ async function next() {
   await sleep(700);
   let cannot_judge = xpath('//div[@class="bh-tip-top-bar"]');
   if (cannot_judge != null) {
+    console.warn(`无法评教`);
     next_judge_button_index += 1;
     let close = xpath('//a[@class="bh-tip-closeIcon"]');
+    console.info(`关闭无法评教提示`);
     close.click();
     await sleep(700);
     return await next();
@@ -95,6 +110,7 @@ async function main() {
     await sleep(1000);
     allgood();
     await submit();
+    await sleep(200);
   }
 
   console.log("Done");
