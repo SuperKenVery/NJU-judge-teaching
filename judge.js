@@ -110,7 +110,7 @@ async function main() {
     await sleep(1000);
     allgood();
     await submit();
-    await sleep(200);
+    await sleep(500);
   }
 
   console.log("Done");
