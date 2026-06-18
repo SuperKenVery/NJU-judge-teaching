@@ -34,7 +34,7 @@
 1. 进入评教网页。在[南京大学办事大厅](https://ehall.nju.edu.cn/ywtb-portal/official/index.html)登陆后搜“网上评教“即可。
 2. 进以下界面：![image](https://github.com/user-attachments/assets/72c07021-3e04-4811-ac9d-fba95ac3d4df)
 3. 打开浏览器的开发者工具（F12），打开Console（控制台）页面。
-4. 把`Judge_Graduate.js`的内容全都复制进来，粘进console里，回车（Enter）。注：首次粘贴需要先打字输入`允许粘贴`或者`Allow paste`
+4. 把`Judge_Graduate.js`的内容全都复制进来，粘进console里，回车（Enter）。注：首次粘贴需要先打字输入`允许粘贴`或者`allow pasting`
 5. 脚本自动评教，Console 中打印当前进展
 ![7fd721f7a399d6f1e1d28befef322879](https://github.com/user-attachments/assets/15222d37-71e6-43ea-8020-ebc3c3712972)
 
